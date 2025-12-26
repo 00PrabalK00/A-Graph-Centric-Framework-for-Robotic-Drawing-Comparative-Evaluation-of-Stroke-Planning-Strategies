@@ -8,22 +8,22 @@
 
 ![System UI](ieee_figs/UI.png)
 
-## 📋 Overview
+## Overview
 
 This project implements an advanced path planning system for the ABB IRB140 robot arm to autonomously draw images. The system converts input images into optimized robot trajectories using multiple graph-based and heuristic algorithms, comparing their performance across metrics like path length, pen-ups, and execution time.
 
 ### Key Features
 
-- 🖼️ **Image-to-Path Pipeline**: Edge detection → Contour extraction → Graph construction → Route optimization
-- 🧮 **Multiple Solvers**: TSP, CPP (Chinese Postman), MST-DFS, Simulated Annealing, Christofides
-- 📊 **Real-time Visualization**: Live plots of routes, timing profiles, and solver comparisons
-- 🤖 **V-REP/CoppeliaSim Integration**: Direct robot simulation and execution
-- 📈 **IEEE-Ready Figures**: Automated generation of publication-quality plots and tables
-- 💾 **Experimental Logging**: CSV database of all runs with NPZ trace files
+- **Image-to-Path Pipeline**: Edge detection → Contour extraction → Graph construction → Route optimization
+- **Multiple Solvers**: TSP, CPP (Chinese Postman), MST-DFS, Simulated Annealing, Christofides
+- **Real-time Visualization**: Live plots of routes, timing profiles, and solver comparisons
+- **V-REP/CoppeliaSim Integration**: Direct robot simulation and execution
+- **IEEE-Ready Figures**: Automated generation of publication-quality plots and tables
+- **Experimental Logging**: CSV database of all runs with NPZ trace files
 
 ---
 
-## 🎯 Algorithm Comparison
+## Algorithm Comparison
 
 | Algorithm | Best For | Time Complexity | Pros | Cons |
 |-----------|----------|-----------------|------|------|
@@ -37,7 +37,7 @@ This project implements an advanced path planning system for the ABB IRB140 robo
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -82,7 +82,7 @@ python abb_draw_ui.py
 
 ---
 
-## 📐 System Architecture
+## System Architecture
 
 ### Processing Pipeline
 
@@ -121,7 +121,7 @@ Input Image → Edge Detection → Contour Simplification → Graph Construction
 
 ---
 
-## 📊 Results & Performance
+## Results & Performance
 
 ### Experimental Data
 
@@ -146,7 +146,7 @@ Input Image → Edge Detection → Contour Simplification → Graph Construction
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 ### UI Parameters
 
@@ -169,7 +169,7 @@ Adjust in `abb_draw_ui.py` lines 128-129 for custom performance/accuracy tradeof
 
 ---
 
-## 📄 File Structure
+## File Structure
 
 ```
 Source_Code/
@@ -192,7 +192,7 @@ Source_Code/
 
 ---
 
-## 🧪 Generating IEEE Figures
+## Generating IEEE Figures
 
 To reproduce publication-ready figures from logged experiments:
 
@@ -215,7 +215,7 @@ python make_ieee_figs_and_table.py
 
 ---
 
-## 🤖 Robot Execution
+## Robot Execution
 
 ### V-REP/CoppeliaSim Setup
 
@@ -234,7 +234,7 @@ For real ABB robot deployment:
 
 ---
 
-## 📚 Algorithm Details
+## Algorithm Details
 
 ### Chinese Postman Problem (CPP)
 
@@ -267,7 +267,7 @@ Acceptance probability: `P = exp((L_old - L_new) / T)`
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -293,45 +293,50 @@ Acceptance probability: `P = exp((L_old - L_new) / T)`
 
 ---
 
-## 📖 Citation
+## Citation
 
 If you use this work in your research, please cite:
 
 ```bibtex
-@inproceedings{abb140_autodraw,
-  title={Intelligent Path Planning for Robotic Drawing Using Graph-Based Optimization},
-  author={[Your Name]},
-  booktitle={IEEE International Conference on Robotics and Automation},
-  year={2025}
+@inproceedings{khare2025robotic,
+  title={A Graph-Centric Framework for Robotic Drawing: Comparative Evaluation of Stroke Planning Strategies},
+  author={Khare, Prabal and B, Prabha},
+  booktitle={IEEE Conference Proceedings},
+  year={2025},
+  organization={Vellore Institute of Technology, Chennai}
 }
 ```
 
----
-
-## 🤝 Contributing
-
+**Authors:**
+- **Prabal Khare** - Vellore Institute of Technology, Chennai (prabal.khare2021@vitstudent.ac.in)
+- **Dr. Prabha B** - Vellore Institute of Technology, Chennai (prabha.b@vit.ac.in)
 Contributions welcome! Areas for improvement:
 
-- [ ] Implement optimal CPP matching (Blossom algorithm)
-- [ ] Add Genetic Algorithm solver
-- [ ] Real-time preview during solving
-- [ ] Multi-color drawing support
-- [ ] ROS integration
-- [ ] Web-based interface
+- Implement optimal CPP matching (Blossom algorithm)
+- Add Genetic Algorithm solver
+- Real-time preview during solving
+- Multi-color drawing support
+- ROS integration
+- Web-based interface
 
 ---
 
-## 📜 License
+## License
 
-This project is part of academic research. For commercial use, please contact the authors.
+This project is part of academic research at Vellore Institute of Technology, Chennai. For commercial use or collaboration inquiries, please contact the authors.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-- **ABB140_control.py**: Original V1 baseline implementation
 - **NetworkX**: Graph algorithm library
 - **CoppeliaSim**: Robot simulation platform
+- **PyQt6**: Cross-platform GUI framework
+- **Vellore Institute of Technology, Chennai**: Research facility and support
+
+---
+
+## Supportim**: Robot simulation platform
 - **PyQt6**: Cross-platform GUI framework
 
 ---
