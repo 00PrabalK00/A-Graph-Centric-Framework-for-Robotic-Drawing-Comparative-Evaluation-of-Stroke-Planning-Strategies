@@ -1,0 +1,9 @@
+# Ignore everything by default
+*
+*/
+
+# Allow these specific items
+!ieee_figs/
+!ieee_figs/**
+!README.md
+!.gitignore
