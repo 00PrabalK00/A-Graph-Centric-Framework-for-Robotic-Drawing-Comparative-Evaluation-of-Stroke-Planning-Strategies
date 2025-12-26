@@ -53,6 +53,7 @@ pip install jinja2
 
 1. **Clone the repository**
 ```bash
+git clone https://github.com/00PrabalK00/A-Graph-Centric-Framework-for-Robotic-Drawing-Comparative-Evaluation-of-Stroke-Planning-Strategies.git
 cd Source_Code
 ```
 
@@ -60,7 +61,7 @@ cd Source_Code
 ```bash
 conda create -n abbpython python=3.10
 conda activate abbpython
-pip install -r requirements.txt  # If available, or use commands above
+pip install pyqt6 matplotlib opencv-python numpy networkx scikit-learn pandas scipy
 ```
 
 3. **Verify V-REP/CoppeliaSim installation**
@@ -126,9 +127,11 @@ Input Image → Edge Detection → Contour Simplification → Graph Construction
 ### Experimental Data
 
 ![TSP vs CPP Profiles](ieee_figs/fig3_tsp_vs_cpp_profiles.png)
+
 *Figure: Velocity and acceleration profiles comparing TSP and CPP solvers*
 
 ![Epsilon Sensitivity](ieee_figs/fig4_epsilon_sensitivity.png)
+
 *Figure: Effect of RDP epsilon on path length and complexity*
 
 ### Benchmark Results (7091 points)
@@ -142,6 +145,7 @@ Input Image → Edge Detection → Contour Simplification → Graph Construction
 *Note: CPP optimizes for edge coverage (visits all contours), leading to longer but more complete paths*
 
 ![Scalability](ieee_figs/fig9_scalability.png)
+
 *Figure: Runtime vs problem size for different algorithms*
 
 ---
@@ -281,15 +285,15 @@ Acceptance probability: `P = exp((L_old - L_new) / T)`
 
 ### Performance Tips
 
-- **Large images (>5000 points):**
-  - Increase RDP epsilon (4-6 px) to reduce point count
-  - Use CPP (fastest) or SA-TSP (scalable)
-  - Avoid Christofides (1200 point limit)
+**Large images (>5000 points):**
+- Increase RDP epsilon (4-6 px) to reduce point count
+- Use CPP (fastest) or SA-TSP (scalable)
+- Avoid Christofides (1200 point limit)
 
-- **High precision needed:**
-  - Lower RDP epsilon (0.5-1.5 px)
-  - Enable skeletonization for thin lines
-  - Use TSP with longer 2-opt iterations
+**High precision needed:**
+- Lower RDP epsilon (0.5-1.5 px)
+- Enable skeletonization for thin lines
+- Use TSP with longer 2-opt iterations
 
 ---
 
@@ -310,6 +314,11 @@ If you use this work in your research, please cite:
 **Authors:**
 - **Prabal Khare** - Vellore Institute of Technology, Chennai (prabal.khare2021@vitstudent.ac.in)
 - **Dr. Prabha B** - Vellore Institute of Technology, Chennai (prabha.b@vit.ac.in)
+
+---
+
+## Contributing
+
 Contributions welcome! Areas for improvement:
 
 - Implement optimal CPP matching (Blossom algorithm)
@@ -336,12 +345,7 @@ This project is part of academic research at Vellore Institute of Technology, Ch
 
 ---
 
-## Supportim**: Robot simulation platform
-- **PyQt6**: Cross-platform GUI framework
-
----
-
-## 📞 Support
+## Support
 
 For questions or issues:
 1. Check existing GitHub Issues
